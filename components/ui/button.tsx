@@ -63,19 +63,29 @@ function Button({
 }: ButtonProps) {
   let resolvedRender = render
   let resolvedChildren = children
+  let childClassName: string | undefined
 
   if (asChild && React.isValidElement(children)) {
-    const child = children as React.ReactElement<{ children?: React.ReactNode }>
-    // Use the child (Link/<a>) as the rendered element, but move its inner
-    // content onto the button so Base UI controls the merged output.
-    resolvedRender = React.cloneElement(child, { children: undefined })
+    const child = children as React.ReactElement<{
+      className?: string
+      children?: React.ReactNode
+    }>
+    // Fold the child's className + inner content onto the button itself, and
+    // hand Base UI a render element with NO className of its own. If the
+    // rendered element keeps a className, Base UI merges two class strings in
+    // an order that differs between SSR and hydration -> hydration mismatch.
+    childClassName = child.props.className
     resolvedChildren = child.props.children
+    resolvedRender = React.cloneElement(child, {
+      className: undefined,
+      children: undefined,
+    })
   }
 
   return (
     <ButtonPrimitive
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size }), childClassName, className)}
       render={resolvedRender}
       // A rendered Link/<a> is not a native <button>.
       nativeButton={asChild ? false : nativeButton}

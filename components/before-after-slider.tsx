@@ -52,17 +52,16 @@ export function BeforeAfterSlider({
           After
         </span>
 
-        {/* Before (clipped) */}
+        {/* Before (clipped via clip-path so fill image stays full-width) */}
         <div
-          className="absolute inset-0 overflow-hidden"
-          style={{ width: `${position}%` }}
+          className="absolute inset-0"
+          style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         >
           <Image
             src={before}
             alt={`${title} — before`}
             fill
             className="object-cover"
-            style={{ width: containerRef.current?.offsetWidth ?? "100%", maxWidth: "none" }}
           />
           <span className="absolute left-3 top-3 rounded-sm bg-foreground/80 px-2 py-1 text-xs font-bold uppercase tracking-wide text-background">
             Before
