@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button"
 import { company } from "@/lib/site-config"
 
 const services = [
-  "Kitchen Remodeling",
-  "Bathroom Remodeling",
-  "Home Addition",
-  "Flooring & Tile",
-  "Interior / Exterior",
-  "Light Commercial",
+  "New Construction",
+  "Commercial Build-Out",
+  "Addition / Structural",
+  "Kitchen or Bath",
+  "Concrete / Site Work",
+  "Interior / Exterior Finishes",
   "Other",
 ]
 

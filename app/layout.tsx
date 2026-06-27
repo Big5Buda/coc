@@ -15,26 +15,27 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   title: 'Hinojosa Remodeling & Construction | Houston, TX',
   description:
-    'Hinojosa Remodeling & Construction delivers quality residential and commercial remodeling and construction across the greater Houston, Texas area. Licensed, insured, and built on craftsmanship.',
+    'Hinojosa Remodeling & Construction handles new construction, commercial build-outs, additions, and full remodels for homes and businesses across the greater Houston, Texas area. Licensed, insured, and built on craftsmanship.',
   generator: 'v0.app',
   keywords: [
-    'remodeling Houston',
+    'new construction Houston',
+    'commercial build-out Houston',
+    'general contractor Houston TX',
     'construction Houston TX',
-    'kitchen remodel',
-    'bathroom remodel',
-    'commercial construction',
+    'home additions Houston',
+    'kitchen and bath remodel',
     'home renovation Houston',
   ],
   openGraph: {
     title: 'Hinojosa Remodeling & Construction | Houston, TX',
     description:
-      'Quality residential and commercial remodeling and construction across the greater Houston, Texas area.',
+      'New construction, commercial build-outs, additions, and full remodels for homes and businesses across the greater Houston, Texas area.',
     type: 'website',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0d0d0d',
+  themeColor: '#ffffff',
 }
 
 export default function RootLayout({
@@ -45,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${geistSans.variable} ${oswald.variable} bg-background`}
+      className={`${geistSans.variable} ${oswald.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         <div className="flex min-h-screen flex-col bg-background">

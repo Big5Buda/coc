@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button"
 import { company } from "@/lib/site-config"
 
 const reasons = [
-  "Licensed & fully insured for your protection",
-  "Clear, itemized estimates with no hidden fees",
-  "Quality materials and skilled, on-time crews",
-  "Clean job sites and respectful, local team",
+  "Licensed & fully insured for every job",
+  "Clear, itemized bids — no surprise line items",
+  "Skilled crews, quality materials, on schedule",
+  "Permits, inspections & code handled in-house",
+  "Clean, organized job sites start to finish",
   "Backed by our workmanship guarantee",
-  "Free, no-obligation consultations",
 ]
 
 export function About() {
@@ -42,12 +42,13 @@ export function About() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground text-pretty">
             {company.shortName} Remodeling &amp; Construction is a Houston-based
-            team focused on doing quality work the right way. Whether it&apos;s a
-            kitchen refresh, a full home renovation, or a small commercial
-            buildout, we treat every project like it&apos;s our own home. We
-            currently take on residential and smaller commercial jobs starting at{" "}
-            {company.minimumJob}, and we&apos;re growing toward larger commercial
-            work.
+            crew that builds, remodels, and finishes — homes, businesses, and the
+            kind of jobs that need a permit and a stamped set of plans. Whether
+            it&apos;s a new build from the slab up, a storefront build-out, or a
+            full home renovation, we run it like it&apos;s our own money on the
+            line: clear pricing, real timelines, and a job site we&apos;d let our
+            family walk through. We take on work starting at {company.minimumJob}{" "}
+            and scale up from there.
           </p>
 
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">

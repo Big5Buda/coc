@@ -47,40 +47,40 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    title: "Kitchen Remodeling",
+    title: "New Construction",
     description:
-      "Custom cabinetry, countertops, lighting, and full layout redesigns that transform the heart of your home.",
+      "Ground-up builds from the slab on up — custom homes, standalone structures, and commercial shells, framed straight and finished clean.",
+    icon: "Building2",
+  },
+  {
+    title: "Commercial Build-Outs",
+    description:
+      "Offices, retail, and tenant spaces taken from bare walls to open-for-business — built to code, inspection-ready, and on schedule.",
+    icon: "Store",
+  },
+  {
+    title: "Additions & Structural",
+    description:
+      "Room additions, second stories, and load-bearing changes that add real square footage — engineered, permitted, and built to last.",
+    icon: "Hammer",
+  },
+  {
+    title: "Kitchens & Baths",
+    description:
+      "Cabinets, tile, countertops, and fixtures done right — the rooms that sell a house and the ones you actually live in.",
     icon: "ChefHat",
   },
   {
-    title: "Bathroom Remodeling",
+    title: "Concrete & Site Work",
     description:
-      "Walk-in showers, tile work, vanities, and modern fixtures built for comfort and lasting quality.",
-    icon: "ShowerHead",
+      "Foundations, slabs, driveways, and walkways poured level and finished to spec — the part nobody sees but everything sits on.",
+    icon: "HardHat",
   },
   {
-    title: "Home Additions",
+    title: "Interior & Exterior Finishes",
     description:
-      "Room additions, second stories, and expansions that add space and value to your property.",
-    icon: "Home",
-  },
-  {
-    title: "Flooring & Tile",
-    description:
-      "Hardwood, luxury vinyl, tile, and concrete installs done right the first time.",
-    icon: "LayoutGrid",
-  },
-  {
-    title: "Interior & Exterior",
-    description:
-      "Drywall, painting, siding, decks, and finish carpentry — inside and out.",
+      "Drywall, paint, flooring, siding, decks, and trim — the finish work that makes the whole job look intentional, inside and out.",
     icon: "PaintRoller",
-  },
-  {
-    title: "Light Commercial",
-    description:
-      "Office buildouts, retail spaces, and tenant improvements for small commercial clients.",
-    icon: "Building2",
   },
 ]
 
@@ -113,27 +113,42 @@ export type GalleryItem = {
   image: string
 }
 
+// Recent-projects grid. Add as many as you want — each one is a tile.
+// To add a project: drop a photo in /public/images, then copy one of
+// the objects below and update the title, category, and image path.
 export const gallery: GalleryItem[] = [
   {
-    title: "Open Concept Living Room",
+    title: "Open-Concept Living Remodel",
     category: "Residential",
     image: "/images/living-project.png",
   },
   {
-    title: "Exterior Home Renovation",
+    title: "Full Exterior Renovation",
     category: "Residential",
     image: "/images/exterior-project.png",
   },
   {
-    title: "Retail Space Buildout",
+    title: "Retail Space Build-Out",
     category: "Commercial",
     image: "/images/commercial-project.png",
   },
   {
     title: "Custom Kitchen Build",
-    category: "Residential",
+    category: "New Construction",
     image: "/images/kitchen-after.png",
   },
+  {
+    title: "Master Bath Renovation",
+    category: "Residential",
+    image: "/images/bathroom-after.png",
+  },
+
+  // ── Add more projects below ──────────────────────────────────────
+  // 1. Drop your photo into /public/images (e.g. my-project.png)
+  // 2. Uncomment a line below and update the title, category, and image.
+  // { title: "Office Tenant Improvement",  category: "Commercial",       image: "/images/your-photo.png" },
+  // { title: "New Home Construction",      category: "New Construction",  image: "/images/your-photo.png" },
+  // { title: "Public / Municipal Project", category: "Commercial",        image: "/images/your-photo.png" },
 ]
 
 export type Testimonial = {

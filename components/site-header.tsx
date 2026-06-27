@@ -56,7 +56,7 @@ export function SiteHeader() {
             {company.phone}
           </a>
           <Button asChild>
-            <Link href="/contact">Get a Free Quote</Link>
+            <Link href="/contact">Get a Free Estimate</Link>
           </Button>
         </div>
 
@@ -97,7 +97,7 @@ export function SiteHeader() {
               </a>
               <Button asChild className="w-full">
                 <Link href="/contact" onClick={() => setOpen(false)}>
-                  Get a Free Quote
+                  Get a Free Estimate
                 </Link>
               </Button>
             </div>

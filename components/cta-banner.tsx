@@ -9,15 +9,16 @@ export function CtaBanner() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 py-12 text-center sm:px-6 lg:flex-row lg:justify-between lg:px-8 lg:text-left">
         <div>
           <h2 className="font-heading text-2xl font-bold uppercase tracking-tight text-primary-foreground sm:text-3xl">
-            Ready to Start Your Project?
+            Got a Project in Mind?
           </h2>
           <p className="mt-2 text-primary-foreground/80">
-            Get a free, no-obligation estimate from your local Houston builders.
+            Free estimates, straight answers, no pressure. Tell us what you&apos;re
+            building — or just ask a question to get started.
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button asChild size="lg" variant="secondary">
-            <Link href="/contact">Get a Free Quote</Link>
+            <Link href="/contact">Get a Free Estimate</Link>
           </Button>
           <Button
             asChild

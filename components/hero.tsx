@@ -32,10 +32,10 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
-            From kitchen and bath remodels to home additions and light
-            commercial buildouts — Hinojosa Remodeling &amp; Construction
-            delivers quality craftsmanship you can count on. Licensed, insured,
-            and proudly local.
+            New construction, commercial build-outs, additions, and full
+            remodels — for homes and businesses across the Houston area. One
+            licensed crew that shows up, builds it right, and cleans up after
+            itself.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

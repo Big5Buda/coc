@@ -1,22 +1,24 @@
 import {
-  ChefHat,
-  ShowerHead,
-  Home,
-  LayoutGrid,
-  PaintRoller,
   Building2,
+  Store,
+  Hammer,
+  ChefHat,
+  HardHat,
+  PaintRoller,
+  Home,
   type LucideIcon,
 } from "lucide-react"
 import { services } from "@/lib/site-config"
 import { SectionHeading } from "@/components/section-heading"
 
 const iconMap: Record<string, LucideIcon> = {
-  ChefHat,
-  ShowerHead,
-  Home,
-  LayoutGrid,
-  PaintRoller,
   Building2,
+  Store,
+  Hammer,
+  ChefHat,
+  HardHat,
+  PaintRoller,
+  Home,
 }
 
 export function Services() {
@@ -26,7 +28,7 @@ export function Services() {
         <SectionHeading
           eyebrow="What We Do"
           title="Our Services"
-          description="Residential and light commercial remodeling and construction across Houston. We take on projects starting at $5,000 and up."
+          description="From the ground up or down to the studs — new builds, commercial build-outs, and full renovations for homes and businesses across the Houston area. Projects start at $5,000."
         />
 
         <div className="mt-12 grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">

@@ -15,8 +15,8 @@ export function SiteFooter() {
             className="h-16 w-auto"
           />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Quality residential and commercial remodeling and construction
-            serving {company.serviceArea}.
+            New construction, commercial build-outs, remodels, and finish work
+            for homes and businesses. {company.serviceArea}.
           </p>
           <div className="mt-5 flex gap-3">
             <a href={company.social.facebook} aria-label="Facebook" className="flex h-9 items-center justify-center rounded-sm border border-border px-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground transition-colors hover:border-primary hover:text-primary">

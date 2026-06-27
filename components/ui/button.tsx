@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { Button as ButtonPrimitive } from '@base-ui/react/button'
 import { cva, type VariantProps } from 'class-variance-authority'
 
@@ -40,18 +41,48 @@ const buttonVariants = cva(
   },
 )
 
+type ButtonProps = ButtonPrimitive.Props &
+  VariantProps<typeof buttonVariants> & {
+    /**
+     * Render the button as its single child element (e.g. a Next.js `<Link>`
+     * or an `<a>`), keeping the button styling. Mirrors the shadcn/Radix
+     * `asChild` convention, mapped onto Base UI's `render` prop.
+     */
+    asChild?: boolean
+  }
+
 function Button({
   className,
   variant = 'default',
   size = 'default',
+  asChild = false,
+  render,
+  children,
+  nativeButton,
   ...props
-}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
+}: ButtonProps) {
+  let resolvedRender = render
+  let resolvedChildren = children
+
+  if (asChild && React.isValidElement(children)) {
+    const child = children as React.ReactElement<{ children?: React.ReactNode }>
+    // Use the child (Link/<a>) as the rendered element, but move its inner
+    // content onto the button so Base UI controls the merged output.
+    resolvedRender = React.cloneElement(child, { children: undefined })
+    resolvedChildren = child.props.children
+  }
+
   return (
     <ButtonPrimitive
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
+      render={resolvedRender}
+      // A rendered Link/<a> is not a native <button>.
+      nativeButton={asChild ? false : nativeButton}
       {...props}
-    />
+    >
+      {resolvedChildren}
+    </ButtonPrimitive>
   )
 }
 

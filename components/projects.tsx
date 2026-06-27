@@ -10,7 +10,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Our Work"
           title="Before & After"
-          description="Drag the slider to see the transformation. These are placeholder photos — swap in your own project images anytime."
+          description="Same space, two very different days — drag the slider to see where we started and where we ended up."
         />
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">

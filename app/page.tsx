@@ -1,7 +1,6 @@
 import { Hero } from "@/components/hero"
 import { StatsBar } from "@/components/stats-bar"
 import { Services } from "@/components/services"
-import { Process } from "@/components/process"
 import { CtaBanner } from "@/components/cta-banner"
 
 export default function HomePage() {
@@ -10,7 +9,6 @@ export default function HomePage() {
       <Hero />
       <StatsBar />
       <Services />
-      <Process />
       <CtaBanner />
     </>
   )
